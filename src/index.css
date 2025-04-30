@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+/* If not using Tailwind, add this to your CSS */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .transition {
+    transition: all 0.3s ease;
+  }
+  
+  /* Mobile menu animations */
+  .md\\:hidden {
+    transition: max-height 0.3s ease-out;
+  }
