@@ -59,7 +59,7 @@ const GameListing = () => {
       downloads: "302k+",
       bonus: 79,
       minWithdrawal: 150,
-      imageUrl: "src/assets/1.webp",
+      imageUrl: "./public/images/1.webp",
       downloadLink: "./https://invite.bfgame9.com/?code=JP0SDPZ"
     },
     {
@@ -96,7 +96,7 @@ const GameListing = () => {
       bonus: 65,
       minWithdrawal: 400,
       imageUrl: "src/assets/5.webp",
-      downloadLink: "https://www.v3gameqz08.com/?regSource=2&rouletteCode=3450279#/"
+      downloadLink: "./public/images/1.webp"
     },
     {
       id: 6,
