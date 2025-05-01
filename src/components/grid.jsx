@@ -60,7 +60,7 @@ const GameListing = () => {
       bonus: 79,
       minWithdrawal: 150,
       imageUrl: "src/assets/1.webp",
-      downloadLink: "https://invite.bfgame9.com/?code=JP0SDPZ"
+      downloadLink: "./https://invite.bfgame9.com/?code=JP0SDPZ"
     },
     {
       id: 2,
@@ -69,7 +69,7 @@ const GameListing = () => {
       bonus: 91,
       minWithdrawal: 200,
       imageUrl: "src/assets/2.webp",
-      downloadLink: "https://invite.aagameclub.com/?code=OO4J7CS"
+      downloadLink: "./https://invite.aagameclub.com/?code=OO4J7CS"
     },
     {
       id: 3,
@@ -78,7 +78,7 @@ const GameListing = () => {
       bonus: 55,
       minWithdrawal: 200,
       imageUrl: "src/assets/3.webp",
-      downloadLink: "https://invite.ez777c.com/?code=UAU5NFS"
+      downloadLink: "./https://invite.ez777c.com/?code=UAU5NFS"
     },
     {
       id: 4,
@@ -87,7 +87,7 @@ const GameListing = () => {
       bonus: 91,
       minWithdrawal: 100,
       imageUrl: "src/assets/4.webp",
-      downloadLink: "https://g.k9.game/?invite_code=0004a266"
+      downloadLink: "./https://g.k9.game/?invite_code=0004a266"
     },
     {
       id: 5,
