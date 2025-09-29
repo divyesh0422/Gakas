@@ -186,7 +186,7 @@ const GameListing = () => {
       downloads: "890k+",
       bonus: 75,
       minWithdrawal: 350,
-      imageUrl: "public/images/8.webp",
+      imageUrl: "public/images/jaiho.webp",
       downloadLink: "https://invite.ez777c.com/?code=UAU5NFS",
       rating: 4.5
     },
@@ -256,7 +256,7 @@ const GameListing = () => {
       downloads: "690k+",
       bonus: 80,
       minWithdrawal: 300,
-      imageUrl: "public/images/img12.jpeg",
+      imageUrl: "public/images/jaiho.webp",
       downloadLink: "https://ap.game/?inviteCode=GFK1AJPC",
       rating: 4.5
     },
@@ -266,7 +266,7 @@ const GameListing = () => {
       downloads: "810k+",
       bonus: 80,
       minWithdrawal: 300,
-      imageUrl: "/images/rummy-king.webp",
+      imageUrl: "public/images/msw.webp",
       downloadLink: "https://g.k9.game/?invite_code=0004a266",
       rating: 4.6
     },
@@ -276,7 +276,7 @@ const GameListing = () => {
       downloads: "430k+",
       bonus: 500,
       minWithdrawal: 300,
-      imageUrl: "/images/rr9-game.webp",
+      imageUrl: "public/images/new.webp",
       downloadLink: "https://invite.rr9.game/?code=LHSI5IS",
       rating: 4.0
     },
@@ -286,7 +286,7 @@ const GameListing = () => {
       downloads: "380k+",
       bonus: 80,
       minWithdrawal: 300,
-      imageUrl: "/images/dreaming55.webp",
+      imageUrl: "public/images/new.webp",
       downloadLink: "https://share.dreaming55.com/Dream55/share/index.html?ic=AD0L46D4&ts=1759115520",
       rating: 4.2
     }
