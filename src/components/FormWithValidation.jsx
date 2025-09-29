@@ -142,7 +142,7 @@ const EnhancedSubscribeForm = () => {
         {/* Name and Email - Horizontal on desktop */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <div className="space-y-2">
-            <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2 flex items-center">
+            <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2 items-center">
               <FaUser className="mr-2 text-blue-500" size={14} />
               Your Name
               <span className="text-gray-400 font-normal ml-1">(Optional)</span>
@@ -163,7 +163,7 @@ const EnhancedSubscribeForm = () => {
           </div>
 
           <div className="space-y-2">
-            <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2 flex items-center">
+            <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2 items-center">
               <FaEnvelope className="mr-2 text-blue-500" size={14} />
               Email Address
               <span className="text-red-500 ml-1">*</span>
@@ -200,7 +200,7 @@ const EnhancedSubscribeForm = () => {
         {/* Mobile and Message - Horizontal on desktop */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <div className="space-y-2">
-            <label htmlFor="mobile" className="block text-sm font-semibold text-gray-700 mb-2 flex items-center">
+            <label htmlFor="mobile" className="text-sm font-semibold text-gray-700 mb-2 flex items-center">
               <FaPhone className="mr-2 text-blue-500" size={14} />
               Mobile Number
               <span className="text-gray-400 font-normal ml-1">(Optional)</span>
@@ -233,7 +233,7 @@ const EnhancedSubscribeForm = () => {
           </div>
 
           <div className="space-y-2">
-            <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-2 flex items-center">
+            <label htmlFor="message" className="text-sm font-semibold text-gray-700 mb-2 flex items-center">
               <FaComment className="mr-2 text-blue-500" size={14} />
               Your Message
               <span className="text-gray-400 font-normal ml-1">(Optional)</span>

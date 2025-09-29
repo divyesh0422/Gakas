@@ -116,7 +116,7 @@ const GameListing = () => {
       downloads: "1.2m+",
       bonus: 79,
       minWithdrawal: 150,
-      imageUrl: "public/images/1.webp",
+      imageUrl: "src/assets/1.webp",
       downloadLink: "https://invite.bfgame9.com/?code=JP0SDPZ",
       rating: 4.5
     },
