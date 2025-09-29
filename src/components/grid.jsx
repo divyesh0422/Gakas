@@ -1,7 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { FaDownload, FaArrowDown } from 'react-icons/fa';
 
-
 const GameCard = ({ game }) => {
   return (
     <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
@@ -11,12 +10,18 @@ const GameCard = ({ game }) => {
             src={game.imageUrl} 
             alt={game.title} 
             className="h-full w-full object-cover"
+            onError={(e) => {
+              e.target.style.display = 'none';
+              e.target.nextSibling.style.display = 'flex';
+            }}
           />
-        ) : (
-          <div className="text-gray-500 text-lg font-medium">
-            {game.title} Image
-          </div>
-        )}
+        ) : null}
+        <div 
+          className="text-gray-500 text-lg font-medium flex items-center justify-center h-full w-full bg-gray-100"
+          style={{ display: game.imageUrl ? 'none' : 'flex' }}
+        >
+          {game.title} Image
+        </div>
       </div>
 
       <div className="p-5">
@@ -41,7 +46,7 @@ const GameCard = ({ game }) => {
           href={game.downloadLink} 
           target="_blank"
           rel="noopener noreferrer"
-          className=" w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-2 px-4 rounded-lg flex items-center justify-center transition-colors duration-300"
+          className="w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-2 px-4 rounded-lg flex items-center justify-center transition-colors duration-300"
         >
           <FaDownload className="mr-2" />
           Download Now
@@ -52,7 +57,7 @@ const GameCard = ({ game }) => {
 };
 
 const GameListing = () => {
-  // Sample game data - first 8 shown initially
+  // Fixed game data with proper image paths and download links
   const allGames = [
     {
       id: 1,
@@ -60,8 +65,8 @@ const GameListing = () => {
       downloads: "302k+",
       bonus: 79,
       minWithdrawal: 150,
-      imageUrl: "public/images/2.webp",
-      downloadLink: "./https://invite.bfgame9.com/?code=JP0SDPZ"
+      imageUrl: "/images/1.webp",
+      downloadLink: "https://invite.bfgame9.com/?code=JP0SDPZ"
     },
     {
       id: 2,
@@ -69,8 +74,8 @@ const GameListing = () => {
       downloads: "922k+",
       bonus: 91,
       minWithdrawal: 200,
-      imageUrl: "src/assets/2.webp",
-      downloadLink: "./https://invite.aagameclub.com/?code=OO4J7CS"
+      imageUrl: "/images/2.webp",
+      downloadLink: "https://invite.aagameclub.com/?code=OO4J7CS"
     },
     {
       id: 3,
@@ -78,8 +83,8 @@ const GameListing = () => {
       downloads: "234k+",
       bonus: 55,
       minWithdrawal: 200,
-      imageUrl: "src/assets/3.webp",
-      downloadLink: "./https://invite.ez777c.com/?code=UAU5NFS"
+      imageUrl: "/images/3.webp",
+      downloadLink: "https://invite.ez777c.com/?code=UAU5NFS"
     },
     {
       id: 4,
@@ -87,8 +92,8 @@ const GameListing = () => {
       downloads: "211k+",
       bonus: 91,
       minWithdrawal: 100,
-      imageUrl: "src/assets/4.webp",
-      downloadLink: "./https://g.k9.game/?invite_code=0004a266"
+      imageUrl: "/images/4.webp",
+      downloadLink: "https://g.k9.game/?invite_code=0004a266"
     },
     {
       id: 5,
@@ -96,8 +101,8 @@ const GameListing = () => {
       downloads: "1.3m+",
       bonus: 65,
       minWithdrawal: 400,
-      imageUrl: "src/assets/5.webp",
-      downloadLink: "./public/images/1.webp"
+      imageUrl: "/images/5.webp",
+      downloadLink: "https://example.com/download/5"
     },
     {
       id: 6,
@@ -105,7 +110,7 @@ const GameListing = () => {
       downloads: "450k+",
       bonus: 85,
       minWithdrawal: 250,
-      imageUrl: "src/assets/6.webp",
+      imageUrl: "/images/6.webp",
       downloadLink: "https://d.seaflygames.live/s/8000000/1771548/31411a39f"
     },
     {
@@ -114,7 +119,7 @@ const GameListing = () => {
       downloads: "1.1m+",
       bonus: 99,
       minWithdrawal: 300,
-      imageUrl: "src/assets/7.webp",
+      imageUrl: "/images/7.webp",
       downloadLink: "https://invite.ez777c.com/?code=UAU5NFS"
     },
     {
@@ -123,7 +128,7 @@ const GameListing = () => {
       downloads: "890k+",
       bonus: 75,
       minWithdrawal: 350,
-      imageUrl: "src/assets/91.webp",
+      imageUrl: "/images/8.webp",
       downloadLink: "https://invite.ez777c.com/?code=UAU5NFS"
     },
     {
@@ -132,7 +137,7 @@ const GameListing = () => {
       downloads: "650k+",
       bonus: 110,
       minWithdrawal: 500,
-      imageUrl: "public/images/1.webp",
+      imageUrl: "/images/9.webp",
       downloadLink: "https://invite.p77.game/?code=JFDR6LS"
     },
     {
@@ -141,7 +146,7 @@ const GameListing = () => {
       downloads: "320k+",
       bonus: 60,
       minWithdrawal: 200,
-      imageUrl: "src/assets/10.webp",
+      imageUrl: "/images/10.webp",
       downloadLink: "https://invite.slotinr.game/?code=DZZI7IZ"
     },
     {
@@ -150,7 +155,7 @@ const GameListing = () => {
       downloads: "780k+",
       bonus: 120,
       minWithdrawal: 400,
-      imageUrl: "src/assets/img9.jpeg",
+      imageUrl: "/images/11.webp",
       downloadLink: "https://cdn8.tp3win.com/cdn/download/sagar_new_v2/index.html?i=16306849&c=Tp3winpoker363GG01&e=pro&s=a"
     },
     {
@@ -159,7 +164,7 @@ const GameListing = () => {
       downloads: "520k+",
       bonus: 80,
       minWithdrawal: 100,
-      imageUrl: "src/assets/img12.jpeg",
+      imageUrl: "/images/12.webp",
       downloadLink: "https://jaiho77702.com/?code=6WY4W5GHHUS&t=1740925545"
     },
     {
@@ -168,61 +173,62 @@ const GameListing = () => {
       downloads: "520k+",
       bonus: 80,
       minWithdrawal: 100,
-      imageUrl: "src/assets/jaiho.webp",
+      imageUrl: "/images/13.webp",
       downloadLink: "https://acc.dream77.info/Dream77/share/index.html?ic=AAWWBQ58&ts=1746005700"
     },
     {
       id: 14,
-      title: "Rummy Empire",
+      title: "Rummy Master",
       downloads: "520k+",
       bonus: 80,
       minWithdrawal: 200,
-      imageUrl: "src/assets/lcg.webp",
+      imageUrl: "/images/14.webp",
       downloadLink: "https://invite.slotinr.game/?code=DZZI7IZ"
     },
     {
       id: 15,
-      title: "Rummy Empire",
+      title: "Teen Patti Pro",
       downloads: "520k+",
       bonus: 80,
       minWithdrawal: 300,
-      imageUrl: "src/assets/img11.jpeg",
+      imageUrl: "/images/15.webp",
       downloadLink: "https://ap.game/?inviteCode=GFK1AJPC"
     },
     {
       id: 16,
-      title: "Rummy Empire",
+      title: "Rummy King",
       downloads: "520k+",
       bonus: 80,
       minWithdrawal: 300,
-      imageUrl: "src/assets/K-3.png",
+      imageUrl: "/images/16.webp",
       downloadLink: "https://g.k9.game/?invite_code=0004a266"
     },
     {
       id: 17,
-      title: "rr9.game",
+      title: "RR9 Game",
       downloads: "520k+",
       bonus: 500,
       minWithdrawal: 300,
-      imageUrl: "src/assets/K-3.png",
+      imageUrl: "/images/17.webp",
       downloadLink: "https://invite.rr9.game/?code=LHSI5IS"
     },
-    { id: 18,
-      title: "dreaming55",
+    {
+      id: 18,
+      title: "Dreaming55",
       downloads: "520k+",
       bonus: 80,
       minWithdrawal: 300,
-      imageUrl: "src/assets/K-3.png",
+      imageUrl: "/images/18.webp",
       downloadLink: "https://share.dreaming55.com/Dream55/share/index.html?ic=AD0L46D4&ts=1759115520"
     }
-
   ];
 
   const [visibleGames, setVisibleGames] = useState(8);
   const moreGamesRef = useRef(null);
 
   const loadMoreGames = () => {
-    setVisibleGames(allGames.length);
+    const newVisibleCount = Math.min(visibleGames + 8, allGames.length);
+    setVisibleGames(newVisibleCount);
     
     // Smooth scroll to the newly loaded games
     setTimeout(() => {
@@ -231,6 +237,12 @@ const GameListing = () => {
         block: 'nearest'
       });
     }, 100);
+  };
+
+  const showLessGames = () => {
+    setVisibleGames(8);
+    // Scroll to top when showing less games
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
@@ -246,8 +258,8 @@ const GameListing = () => {
           ))}
         </div>
 
-        {visibleGames < allGames.length && (
-          <div className="mt-12 text-center">
+        <div className="mt-12 text-center">
+          {visibleGames < allGames.length ? (
             <button
               onClick={loadMoreGames}
               className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-full inline-flex items-center transition-colors duration-300"
@@ -255,8 +267,15 @@ const GameListing = () => {
               View More Games
               <FaArrowDown className="ml-2" />
             </button>
-          </div>
-        )}
+          ) : (
+            <button
+              onClick={showLessGames}
+              className="bg-gray-600 hover:bg-gray-700 text-white font-medium py-3 px-8 rounded-full inline-flex items-center transition-colors duration-300"
+            >
+              Show Less Games
+            </button>
+          )}
+        </div>
 
         {/* This is the reference point for scrolling */}
         <div ref={moreGamesRef} className="h-1"></div>
