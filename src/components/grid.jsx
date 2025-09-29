@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { FaDownload, FaArrowDown } from 'react-icons/fa';
-import assets from '../assets/1.webp';
+
 
 const GameCard = ({ game }) => {
   return (
@@ -60,7 +60,7 @@ const GameListing = () => {
       downloads: "302k+",
       bonus: 79,
       minWithdrawal: 150,
-      imageUrl: "./public/images/1.webp",
+      imageUrl: "public/images/2.webp",
       downloadLink: "./https://invite.bfgame9.com/?code=JP0SDPZ"
     },
     {
